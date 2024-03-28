@@ -1,5 +1,5 @@
-import { initSocketServer } from '../server/SocketServer'
-import { app } from "../server/app";
+import { initSocketServer } from './SocketServer'
+import { app } from "./app";
 import connectDb from "./utils/db";
 import { v2 as cloudinary } from 'cloudinary'
 import http from 'http'
