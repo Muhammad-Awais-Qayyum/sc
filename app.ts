@@ -16,10 +16,10 @@ import notificationrouter from "./routes/notificationRoutes";
 import analyticsrouter from "./routes/analyticsRoutes";
 import layoutrouter from "./routes/layoutRoutes";
 
-const corsConfig={
-    origin:"*",
-    credential:true,
-    methods:["GET","POST","PUT","DELETE"]
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    optionSuccessStatus: 200
 }
 // cookie parser
 
@@ -30,18 +30,18 @@ app.use(express.json({ limit: "50mb" }));
 
 app.set('trust proxy', 1);
 
-app.options("",cors(corsConfig))
+
 // cors for orgin
 
 app.use(
-    cors(corsConfig) 
+    cors(corsConfig)
 );
 
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-  });
+});
 
 // Apply the rate limiting middleware to all requests.
 app.use(limiter)
