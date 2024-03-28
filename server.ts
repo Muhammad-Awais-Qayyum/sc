@@ -1,6 +1,6 @@
-import { initSocketServer } from '../server/SocketServer.js'
-import { app } from "../server/app.js";
-import connectDb from "./utils/db.js";
+import { initSocketServer } from '../server/SocketServer'
+import { app } from "../server/app";
+import connectDb from "./utils/db";
 import { v2 as cloudinary } from 'cloudinary'
 import http from 'http'
 require("dotenv").config();

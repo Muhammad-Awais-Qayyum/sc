@@ -456,7 +456,11 @@ export const updateUserRole = CatchAsync(async (req: Request, res: Response, nex
     try {
         const { email, role } = req.body
 
+            const findEmail=await User.findOne({email})
 
+            if (!findEmail) {
+                return next (new ErrorHandler("Email does not exists",400))
+            }
 
         updateRoleService(res, email, role)
     } catch (error: any) {
