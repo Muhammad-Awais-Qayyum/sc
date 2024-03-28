@@ -16,6 +16,11 @@ import notificationrouter from "./routes/notificationRoutes";
 import analyticsrouter from "./routes/analyticsRoutes";
 import layoutrouter from "./routes/layoutRoutes";
 
+const corsConfig={
+    origin:"*",
+    credential:true,
+    methods:["GET","POST","PUT","DELETE"]
+}
 // cookie parser
 
 app.use(cookieParser());
@@ -24,14 +29,11 @@ app.use(cookieParser());
 app.use(express.json({ limit: "50mb" }));
 
 
-
+app.options("",cors(corsConfig))
 // cors for orgin
 
 app.use(
-    cors({
-        origin: ['http://localhost:3000'],
-        credentials: true
-    }) 
+    cors(corsConfig) 
 );
 
 
