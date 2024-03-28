@@ -5,12 +5,6 @@
             "src": "server.ts",
             "use": "@vercel/node"
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "server.ts"
-        }
     ]
-    
 }
+
