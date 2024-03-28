@@ -28,6 +28,7 @@ app.use(cookieParser());
 
 app.use(express.json({ limit: "50mb" }));
 
+app.set('trust proxy', 1);
 
 app.options("",cors(corsConfig))
 // cors for orgin
