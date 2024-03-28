@@ -1,4 +1,4 @@
-import { initSocketServer } from './SocketServer'
+import { initSocketServer } from './SocketServer.js'
 import { app } from "./app";
 import connectDb from "./utils/db";
 import { v2 as cloudinary } from 'cloudinary'
