@@ -11,5 +11,16 @@
             "src": "/(.*)",
             "dest": "server.ts"
         }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "https://smartstudy-frontent-lajz.vercel.app/"
+                }
+            ]
+        }
     ]
 }
