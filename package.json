@@ -7,8 +7,8 @@
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only --compiler-options \"{\\\"module\\\": \\\"NodeNext\\\", \\\"moduleResolution\\\": \\\"NodeNext\\\"}\" server.ts"
-
+    "dev": "ts-node-dev --respawn --transpile-only --compiler-options \"{\\\"module\\\": \\\"NodeNext\\\", \\\"moduleResolution\\\": \\\"NodeNext\\\"}\" server.ts",
+    "start": "node server.ts"
   },
   "author": "awais",
   "license": "ISC",
